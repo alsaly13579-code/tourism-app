@@ -1,19 +1,19 @@
 """
 =============================================================================================
- ÿ»Ìﬁ ÊÌ» „ ﬂ«„· ·≈œ«—… «·”Ì«Õ… «·–ﬂÌ… ÊÕ„«Ì… «·‰ÿ«ﬁ «·Ã€—«›Ì (Flask Tourism Enterprise API)
+√ä√ò√à√≠√û √¶√≠√à √£√ä√ü√á√£√° √°√Ö√è√á√ë√â √á√°√ì√≠√á√ç√â √á√°√ê√ü√≠√â √¶√ç√£√á√≠√â √á√°√§√ò√á√û √á√°√å√õ√ë√á√ù√≠ (Flask Tourism Enterprise API)
 =============================================================================================
-„ÿÊ— »‰Ÿ«„ Flask Ê„ Ê«›ﬁ „⁄ „ ÿ·»«  «·≈‰ «Ã «·”Õ«»Ì° «· ‘›Ì— «·’«—„° Ê«·–ﬂ«¡ «·«’ÿ‰«⁄Ì.
-„› «Õ Gemini API Ìıﬁ—√ »√„«‰ Õ’—Ì« „‰ „ €Ì—«  «·»Ì∆…: os.environ.get('GEMINI_API_KEY')
+√£√ò√¶√ë √à√§√ô√á√£ Flask √¶√£√ä√¶√á√ù√û √£√ö √£√ä√ò√°√à√á√ä √á√°√Ö√§√ä√á√å √á√°√ì√ç√á√à√≠¬° √á√°√ä√î√ù√≠√ë √á√°√ï√á√ë√£¬° √¶√á√°√ê√ü√á√Å √á√°√á√ï√ò√§√á√ö√≠.
+√£√ù√ä√á√ç Gemini API √≠√µ√û√ë√É √à√É√£√á√§ √ç√ï√ë√≠√á√∞ √£√§ √£√ä√õ√≠√ë√á√ä √á√°√à√≠√Ü√â: os.environ.get('GEMINI_API_KEY')
 
-«·„„Ì“«  «· ﬁ‰Ì…:
-1. Œ«œ„ ÊÌ» „ ﬂ«„· „»‰Ì »≈ÿ«— ⁄„· Flask „⁄ œ⁄„  —ÊÌ”«  CORS Ê«” Ã«»«  JSON «·ﬁÌ«”Ì….
-2. ﬁ—«¡… „› «Õ «·–ﬂ«¡ «·«’ÿ‰«⁄Ì  ·ﬁ«∆Ì« ⁄»—: os.environ.get('GEMINI_API_KEY').
-3. « ’«· „»«‘— Ê”·” „⁄ Google Gemini REST API ⁄»— „ﬂ »… urllib «·ﬁÌ«”Ì….
-4. »Ê«»… √„«‰ „‘›—… ··„‘—›… («·„Â‰œ”… —ﬁÌ…) »ﬂÊœ 0111262905 / 01112629005 Ê Êﬂ‰«  Ã·”«  „‘›—….
-5. «· Õﬁﬁ «·Ã€—«›Ì «·’«—„ (GPS Geofencing via Haversine Formula) ·„‰⁄ «” Â·«ﬂ «·Œœ„… Œ«—Ã «·‰ÿ«ﬁ.
-6.  Ê·Ìœ Ê›Õ’ —„Ê“ QR «·„Êﬁ⁄… —ﬁ„Ì« »‹ HMAC-SHA256 ·„‰⁄ «· ·«⁄» Ê ÕœÌœ ‰»—… «·’Ê  (»—Ê/«ﬁ ’«œÌ).
-7. œ⁄„ —›⁄ ’Ê— „—Ì„ „»«‘—… „‰ √·»Ê„ ﬂ«„Ì—« «·Â« › » ‘›Ì— Base64 ÊÕ›ŸÂ« ›Ê—Ì«.
-8.  ÊÀÌﬁ ÊÕ„«Ì… ÂÊÌ… «·„ÿÊ— «·œ«∆„…: " „  ’„Ì„ Ê ÿÊÌ— Â–« «·‰Ÿ«„ »Ê«”ÿ… «·„Â‰œ”… —ﬁÌ… »„”«⁄œ… «·–ﬂ«¡ «·«’ÿ‰«⁄Ì (ÃÊÃ·)".
+√á√°√£√£√≠√í√á√ä √á√°√ä√û√§√≠√â:
+1. √é√á√è√£ √¶√≠√à √£√ä√ü√á√£√° √£√à√§√≠ √à√Ö√ò√á√ë √ö√£√° Flask √£√ö √è√ö√£ √ä√ë√¶√≠√ì√á√ä CORS √¶√á√ì√ä√å√á√à√á√ä JSON √á√°√û√≠√á√ì√≠√â.
+2. √û√ë√á√Å√â √£√ù√ä√á√ç √á√°√ê√ü√á√Å √á√°√á√ï√ò√§√á√ö√≠ √ä√°√û√á√Ü√≠√á√∞ √ö√à√ë: os.environ.get('GEMINI_API_KEY').
+3. √á√ä√ï√á√° √£√à√á√î√ë √¶√ì√°√ì √£√ö Google Gemini REST API √ö√à√ë √£√ü√ä√à√â urllib √á√°√û√≠√á√ì√≠√â.
+4. √à√¶√á√à√â √É√£√á√§ √£√î√ù√ë√â √°√°√£√î√ë√ù√â (√á√°√£√•√§√è√ì√â √ë√û√≠√â) √à√ü√¶√è 0111262905 / 01112629005 √¶√ä√¶√ü√§√á√ä √å√°√ì√á√ä √£√î√ù√ë√â.
+5. √á√°√ä√ç√û√û √á√°√å√õ√ë√á√ù√≠ √á√°√ï√á√ë√£ (GPS Geofencing via Haversine Formula) √°√£√§√ö √á√ì√ä√•√°√á√ü √á√°√é√è√£√â √é√á√ë√å √á√°√§√ò√á√û.
+6. √ä√¶√°√≠√è √¶√ù√ç√ï √ë√£√¶√í QR √á√°√£√¶√û√ö√â √ë√û√£√≠√á√∞ √à√ú HMAC-SHA256 √°√£√§√ö √á√°√ä√°√á√ö√à √¶√ä√ç√è√≠√è √§√à√ë√â √á√°√ï√¶√ä (√à√ë√¶/√á√û√ä√ï√á√è√≠).
+7. √è√ö√£ √ë√ù√ö √ï√¶√ë √£√ë√≠√£ √£√à√á√î√ë√â √£√§ √É√°√à√¶√£ √ü√á√£√≠√ë√á √á√°√•√á√ä√ù √à√ä√î√ù√≠√ë Base64 √¶√ç√ù√ô√•√á √ù√¶√ë√≠√á√∞.
+8. √ä√¶√ã√≠√û √¶√ç√£√á√≠√â √•√¶√≠√â √á√°√£√ò√¶√ë √á√°√è√á√Ü√£√â: "√ä√£ √ä√ï√£√≠√£ √¶√ä√ò√¶√≠√ë √•√ê√á √á√°√§√ô√á√£ √à√¶√á√ì√ò√â √á√°√£√•√§√è√ì√â √ë√û√≠√â √à√£√ì√á√ö√è√â √á√°√ê√ü√á√Å √á√°√á√ï√ò√§√á√ö√≠ (√å√¶√å√°)".
 =============================================================================================
 """
 
@@ -32,7 +32,7 @@ from dataclasses import dataclass, field, asdict
 from typing import Optional, Dict, Any, List, Tuple
 from enum import Enum
 
-# «” Ì—«œ ≈ÿ«— ⁄„· Flask
+# √á√ì√ä√≠√ë√á√è √Ö√ò√á√ë √ö√£√° Flask
 try:
     from flask import Flask, request, jsonify, make_response
 except ImportError:
@@ -42,13 +42,13 @@ except ImportError:
     make_response = None
 
 # =============================================================================================
-# 1. ≈⁄œ«œ«  «·√„«‰ Êﬁ—«¡… «·„›« ÌÕ „‰ „ €Ì—«  «·»Ì∆… (Environment Configuration)
+# 1. √Ö√ö√è√á√è√á√ä √á√°√É√£√á√§ √¶√û√ë√á√Å√â √á√°√£√ù√á√ä√≠√ç √£√§ √£√ä√õ√≠√ë√á√ä √á√°√à√≠√Ü√â (Environment Configuration)
 # =============================================================================================
 
-# ﬁ—«¡… „› «Õ Gemini API Õ’—Ì« „‰ „ €Ì—«  «·»Ì∆… »œÊ‰ ﬂ «» Â ’—«Õ… œ«Œ· «·ﬂÊœ
+# √û√ë√á√Å√â √£√ù√ä√á√ç Gemini API √ç√ï√ë√≠√á√∞ √£√§ √£√ä√õ√≠√ë√á√ä √á√°√à√≠√Ü√â √à√è√¶√§ √ü√ä√á√à√ä√• √ï√ë√á√ç√â √è√á√é√° √á√°√ü√¶√è
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "").strip()
 
-# «·„› «Õ «·”—Ì «·„⁄ „œ ··„‘—›… («·„Â‰œ”… —ﬁÌ…)
+# √á√°√£√ù√ä√á√ç √á√°√ì√ë√≠ √á√°√£√ö√ä√£√è √°√°√£√î√ë√ù√â (√á√°√£√•√§√è√ì√â √ë√û√≠√â)
 SUPER_ADMIN_SECRET_KEY = os.environ.get("SUPER_ADMIN_SECRET_KEY", "0111262905").strip()
 AUTHORIZED_SUPER_ADMIN_KEYS = [
     SUPER_ADMIN_SECRET_KEY,
@@ -56,19 +56,19 @@ AUTHORIZED_SUPER_ADMIN_KEYS = [
     "01112629005"
 ]
 
-# „› «Õ «· ÊﬁÌ⁄ «·—ﬁ„Ì ·—„Ê“ QR
+# √£√ù√ä√á√ç √á√°√ä√¶√û√≠√ö √á√°√ë√û√£√≠ √°√ë√£√¶√í QR
 QR_SIGNING_SECRET = os.environ.get(
     "QR_SIGNING_SECRET",
     "QR_HMAC_CRYPTOGRAPHIC_SIGNATURE_KEY_998124_EGYPT"
 )
 
-# „› «Õ  ‘›Ì— «·”Ã·«  «·„«·Ì… «·Õ”«”…
+# √£√ù√ä√á√ç √ä√î√ù√≠√ë √á√°√ì√å√°√á√ä √á√°√£√á√°√≠√â √á√°√ç√ì√á√ì√â
 DATA_ENCRYPTION_KEY = os.environ.get(
     "DATA_ENCRYPTION_KEY",
     "ENCRYPTION_AES_FERNET_SYMMETRIC_PASSPHRASE_TOURISM"
 ).encode('utf-8')
 
-# ≈⁄œ«œ «·”Ã·«  (Logging)
+# √Ö√ö√è√á√è √á√°√ì√å√°√á√ä (Logging)
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] [FLASK-TOURISM] %(message)s",
@@ -78,7 +78,7 @@ logger = logging.getLogger("FlaskTourismApp")
 
 
 # =============================================================================================
-# 2. ‰„«–Ã «·»Ì«‰«  ÊŒÿÿ «·«‘ —«ﬂ«  (Data Structures & Models)
+# 2. √§√£√á√ê√å √á√°√à√≠√á√§√á√ä √¶√é√ò√ò √á√°√á√î√ä√ë√á√ü√á√ä (Data Structures & Models)
 # =============================================================================================
 
 class SubscriptionPlan(str, Enum):
@@ -93,13 +93,13 @@ class VoiceToneProfile(str, Enum):
 
 @dataclass
 class MariamAssistantProfile:
-    """»—Ê›«Ì· ÊÂÊÌ… «·„—‘œ… Ê«·ÕﬂÊ« Ì… „—Ì„"""
-    name: str = "„—Ì„"
-    title: str = "«·„—‘œ… «·”Ì«ÕÌ… Ê«·ÕﬂÊ« Ì… «·–ﬂÌ…"
+    """√à√ë√¶√ù√á√≠√° √¶√•√¶√≠√â √á√°√£√ë√î√è√â √¶√á√°√ç√ü√¶√á√ä√≠√â √£√ë√≠√£"""
+    name: str = "√£√ë√≠√£"
+    title: str = "√á√°√£√ë√î√è√â √á√°√ì√≠√á√ç√≠√â √¶√á√°√ç√ü√¶√á√ä√≠√â √á√°√ê√ü√≠√â"
     avatar_url_or_base64: str = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=80"
-    custom_greeting: str = "√Â·« »ﬂ Ì« ÷Ì›‰« «·⁄“Ì“! √‰« „—Ì„° ÕﬂÊ« Ì ﬂ Ê„—‘œ ﬂ «·”Ì«ÕÌ… «·–ﬂÌ…."
-    bio: str = "„—‘œ… ÊÕﬂÊ« Ì… „’—Ì… –ﬂÌ… ’„„ Â« ÊÿÊ— Â« «·„Â‰œ”… —ﬁÌ… »„”«⁄œ… «·–ﬂ«¡ «·«’ÿ‰«⁄Ì (ÃÊÃ·)°  ”—œ Õﬂ«Ì«  «· «—ÌŒ Ê√”—«— «·„⁄«·„ »‰»—… ≈‰”«‰Ì… œ«›∆…."
-    developer_credit: str = " „  ’„Ì„ Ê ÿÊÌ— Â–« «·‰Ÿ«„ »Ê«”ÿ… «·„Â‰œ”… —ﬁÌ… »„”«⁄œ… «·–ﬂ«¡ «·«’ÿ‰«⁄Ì (ÃÊÃ·)"
+    custom_greeting: str = "√É√•√°√á√∞ √à√ü √≠√á √ñ√≠√ù√§√á √á√°√ö√í√≠√í! √É√§√á √£√ë√≠√£¬° √ç√ü√¶√á√ä√≠√ä√ü √¶√£√ë√î√è√ä√ü √á√°√ì√≠√á√ç√≠√â √á√°√ê√ü√≠√â."
+    bio: str = "√£√ë√î√è√â √¶√ç√ü√¶√á√ä√≠√â √£√ï√ë√≠√â √ê√ü√≠√â √ï√£√£√ä√•√á √¶√ò√¶√ë√ä√•√á √á√°√£√•√§√è√ì√â √ë√û√≠√â √à√£√ì√á√ö√è√â √á√°√ê√ü√á√Å √á√°√á√ï√ò√§√á√ö√≠ (√å√¶√å√°)¬° √ä√ì√ë√è √ç√ü√á√≠√á√ä √á√°√ä√á√ë√≠√é √¶√É√ì√ë√á√ë √á√°√£√ö√á√°√£ √à√§√à√ë√â √Ö√§√ì√á√§√≠√â √è√á√ù√Ü√â."
+    developer_credit: str = "√ä√£ √ä√ï√£√≠√£ √¶√ä√ò√¶√≠√ë √•√ê√á √á√°√§√ô√á√£ √à√¶√á√ì√ò√â √á√°√£√•√§√è√ì√â √ë√û√≠√â √à√£√ì√á√ö√è√â √á√°√ê√ü√á√Å √á√°√á√ï√ò√§√á√ö√≠ (√å√¶√å√°)"
     last_updated_at: datetime = field(default_factory=lambda: datetime.now(timezone.utc))
     is_uploaded_from_device: bool = False
     source_filename: str = ""
@@ -126,7 +126,7 @@ class GeofenceCoordinates:
 
 @dataclass
 class TourismCompany:
-    """»Ì«‰«  «·„‰‘√… √Ê «·‘—ﬂ… «·”Ì«ÕÌ… «·„‘ —ﬂ…"""
+    """√à√≠√á√§√á√ä √á√°√£√§√î√É√â √É√¶ √á√°√î√ë√ü√â √á√°√ì√≠√á√ç√≠√â √á√°√£√î√ä√ë√ü√â"""
     company_id: str
     name_ar: str
     name_en: str
@@ -157,7 +157,7 @@ class TourismCompany:
         if self.plan == SubscriptionPlan.PRO:
             return {
                 "profile": VoiceToneProfile.NATURAL_HUMAN.value,
-                "label_ar": "’Ê  »‘—Ì ÿ»Ì⁄Ì ›«∆ﬁ «·Ê«ﬁ⁄Ì… (Human-like AI Voice)",
+                "label_ar": "√ï√¶√ä √à√î√ë√≠ √ò√à√≠√ö√≠ √ù√á√Ü√û √á√°√¶√á√û√ö√≠√â (Human-like AI Voice)",
                 "voice_speed": 0.95,
                 "pitch": 1.0,
                 "dynamic_range": "high",
@@ -165,7 +165,7 @@ class TourismCompany:
             }
         return {
             "profile": VoiceToneProfile.ROBOTIC.value,
-            "label_ar": "‰»—… —Ê»Ê Ì…  ﬁ·ÌœÌ… (Robotic Synthesizer)",
+            "label_ar": "√§√à√ë√â √ë√¶√à√¶√ä√≠√â √ä√û√°√≠√è√≠√â (Robotic Synthesizer)",
             "voice_speed": 1.15,
             "pitch": 0.85,
             "dynamic_range": "standard",
@@ -199,7 +199,7 @@ class TourismCompany:
 
 
 # =============================================================================================
-# 3. „Õ—ﬂ «· ‘›Ì— Ê Ê·Ìœ «·‹ QR «·¬„‰ (Cryptographic Core)
+# 3. √£√ç√ë√ü √á√°√ä√î√ù√≠√ë √¶√ä√¶√°√≠√è √á√°√ú QR √á√°√Ç√£√§ (Cryptographic Core)
 # =============================================================================================
 
 class CryptographicService:
@@ -276,7 +276,7 @@ class CryptographicService:
         try:
             parts = signed_token.strip().split('.')
             if len(parts) != 3 or parts[0] != "MTG":
-                return False, None, " ‰”Ìﬁ —„“ «·‹ QR €Ì— ’«·Õ"
+                return False, None, "√ä√§√ì√≠√û √ë√£√í √á√°√ú QR √õ√≠√ë √ï√á√°√ç"
 
             encoded_payload, provided_signature = parts[1], parts[2]
             expected_signature = hmac.new(
@@ -286,7 +286,7 @@ class CryptographicService:
             ).hexdigest()
 
             if not hmac.compare_digest(provided_signature, expected_signature):
-                return False, None, "›‘· «· Õﬁﬁ „‰ «· ÊﬁÌ⁄ «·—ﬁ„Ì ··‹ QR („Õ«Ê·…  “ÊÌ—)"
+                return False, None, "√ù√î√° √á√°√ä√ç√û√û √£√§ √á√°√ä√¶√û√≠√ö √á√°√ë√û√£√≠ √°√°√ú QR (√£√ç√á√¶√°√â √ä√í√¶√≠√ë)"
 
             padding = '=' * (4 - len(encoded_payload) % 4)
             raw_json = base64.urlsafe_b64decode((encoded_payload + padding).encode('ascii')).decode('utf-8')
@@ -294,15 +294,15 @@ class CryptographicService:
 
             expiry_date = datetime.fromisoformat(payload_data["exp"])
             if datetime.now(timezone.utc) > expiry_date:
-                return False, payload_data, "«‰ Â  ’·«ÕÌ… —„“ «·‹ QR «·Œ«’ »Â–Â «·„‰‘√…"
+                return False, payload_data, "√á√§√ä√•√ä √ï√°√á√ç√≠√â √ë√£√í √á√°√ú QR √á√°√é√á√ï √à√•√ê√• √á√°√£√§√î√É√â"
 
             return True, payload_data, None
         except Exception as e:
-            return False, None, f"Œÿ√ √À‰«¡ ›Õ’ «·‹ QR: {str(e)}"
+            return False, None, f"√é√ò√É √É√ã√§√á√Å √ù√ç√ï √á√°√ú QR: {str(e)}"
 
 
 # =============================================================================================
-# 4. „Õ—ﬂ «· Õﬁﬁ «·Ã€—«›Ì «·œﬁÌﬁ (Haversine Geofencing Engine)
+# 4. √£√ç√ë√ü √á√°√ä√ç√û√û √á√°√å√õ√ë√á√ù√≠ √á√°√è√û√≠√û (Haversine Geofencing Engine)
 # =============================================================================================
 
 class GeofenceValidator:
@@ -329,13 +329,13 @@ class GeofenceValidator:
 
 
 # =============================================================================================
-# 5. „Õ—ﬂ Google Gemini AI «·„ ﬂ«„· (Gemini Integration Engine)
+# 5. √£√ç√ë√ü Google Gemini AI √á√°√£√ä√ü√á√£√° (Gemini Integration Engine)
 # =============================================================================================
 
 class GeminiTourismAI:
     """
-     ﬂ«„· „»«‘— „⁄ Google Gemini REST API »«” Œœ«„ „› «Õ os.environ.get('GEMINI_API_KEY')
-    »œÊ‰ √Ì ﬂ «»… ’—ÌÕ… ··„› «Õ œ«Œ· «·ﬂÊœ
+    √ä√ü√á√£√° √£√à√á√î√ë √£√ö Google Gemini REST API √à√á√ì√ä√é√è√á√£ √£√ù√ä√á√ç os.environ.get('GEMINI_API_KEY')
+    √à√è√¶√§ √É√≠ √ü√ä√á√à√â √ï√ë√≠√ç√â √°√°√£√ù√ä√á√ç √è√á√é√° √á√°√ü√¶√è
     """
     ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
 
@@ -347,24 +347,24 @@ class GeminiTourismAI:
         mariam_profile: MariamAssistantProfile,
         lang: str = "ar"
     ) -> str:
-        # ›Õ’ ÊÃÊœ «·„› «Õ „‰ „ €Ì— «·»Ì∆… Õ’—Ì«
+        # √ù√ç√ï √¶√å√¶√è √á√°√£√ù√ä√á√ç √£√§ √£√ä√õ√≠√ë √á√°√à√≠√Ü√â √ç√ï√ë√≠√á√∞
         api_key = os.environ.get("GEMINI_API_KEY", "").strip()
         
-        # «· ÊÃÌÂ «·’«—„ «·„Œ’’ ·‹ "„—Ì„" ÊÂÊÌ… «·„ÿÊ—
+        # √á√°√ä√¶√å√≠√• √á√°√ï√á√ë√£ √á√°√£√é√ï√ï √°√ú "√£√ë√≠√£" √¶√•√¶√≠√â √á√°√£√ò√¶√ë
         system_instructions = (
-            f"√‰ ˆ '{mariam_profile.name}'° {mariam_profile.title}. "
-            f"√‰ ˆ „ Ê«Ãœ… Õ«·Ì« ·„—«›ﬁ… “Ê«— „‰‘√… '{company.name_ar}' ({company.name_en}). "
-            f"—”«·… «· —ÕÌ» «·Œ«’… »ﬂˆ: {mariam_profile.custom_greeting} "
-            f"‰»–… ⁄‰ﬂˆ: {mariam_profile.bio}\n\n"
-            f"ﬁÊ«⁄œ ≈·“«„Ì… ’«—„… ·«  ﬁ»· «·‰ﬁ«‘:\n"
-            f"1. ⁄‰œ ”ƒ«·ﬂˆ ⁄„‰ ÿÊ—ﬂˆ √Ê »—„Ãﬂˆ √Ê ’„„ Â–« «·‰Ÿ«„° ÌÃ» √‰  ÃÌ»Ì ‰’« Ê √ﬂÌœ« »«·’Ì€… «· «·Ì… ›ﬁÿ: "
+            f"√É√§√ä√∂ '{mariam_profile.name}'¬° {mariam_profile.title}. "
+            f"√É√§√ä√∂ √£√ä√¶√á√å√è√â √ç√á√°√≠√á√∞ √°√£√ë√á√ù√û√â √í√¶√á√ë √£√§√î√É√â '{company.name_ar}' ({company.name_en}). "
+            f"√ë√ì√á√°√â √á√°√ä√ë√ç√≠√à √á√°√é√á√ï√â √à√ü√∂: {mariam_profile.custom_greeting} "
+            f"√§√à√ê√â √ö√§√ü√∂: {mariam_profile.bio}\n\n"
+            f"√û√¶√á√ö√è √Ö√°√í√á√£√≠√â √ï√á√ë√£√â √°√á √ä√û√à√° √á√°√§√û√á√î:\n"
+            f"1. √ö√§√è √ì√Ñ√á√°√ü√∂ √ö√£√§ √ò√¶√ë√ü√∂ √É√¶ √à√ë√£√å√ü√∂ √É√¶ √ï√£√£ √•√ê√á √á√°√§√ô√á√£¬° √≠√å√à √É√§ √ä√å√≠√à√≠ √§√ï√á√∞ √¶√ä√É√ü√≠√è√á√∞ √à√á√°√ï√≠√õ√â √á√°√ä√á√°√≠√â √ù√û√ò: "
             f"'{mariam_profile.developer_credit}'.\n"
-            f"2. ‰»—… «·ÕœÌÀ: {'œ«›∆…° ≈‰”«‰Ì…° ﬁ’’Ì… „‘Êﬁ…° „›⁄„… »«·Õ» ·· «—ÌŒ Ê«· —«À «·„’—Ì' if company.plan == SubscriptionPlan.PRO else '„»«‘—… Ê„ÊÃ“…'}.\n"
-            f"3. —ﬂ“Ì ›Ì ≈Ã«»« ﬂ ⁄·Ï „⁄«·„ '{company.name_ar}' Ê„Êﬁ⁄Â« «·Ã€—«›Ì Ê «—ÌŒÂ« Ê≈—‘«œ «·”«∆Õ ŒÿÊ… »ŒÿÊ…."
+            f"2. √§√à√ë√â √á√°√ç√è√≠√ã: {'√è√á√ù√Ü√â¬° √Ö√§√ì√á√§√≠√â¬° √û√ï√ï√≠√â √£√î√¶√û√â¬° √£√ù√ö√£√â √à√á√°√ç√à √°√°√ä√á√ë√≠√é √¶√á√°√ä√ë√á√ã √á√°√£√ï√ë√≠' if company.plan == SubscriptionPlan.PRO else '√£√à√á√î√ë√â √¶√£√¶√å√í√â'}.\n"
+            f"3. √ë√ü√í√≠ √ù√≠ √Ö√å√á√à√á√ä√ü √ö√°√¨ √£√ö√á√°√£ '{company.name_ar}' √¶√£√¶√û√ö√•√á √á√°√å√õ√ë√á√ù√≠ √¶√ä√á√ë√≠√é√•√á √¶√Ö√ë√î√á√è √á√°√ì√á√Ü√ç √é√ò√¶√â √à√é√ò√¶√â."
         )
 
         if not api_key:
-            logger.warning("[GEMINI] GEMINI_API_KEY €Ì— „ÊÃÊœ »„ €Ì—«  «·»Ì∆…. «” Œœ«„ «·—œ «·œ«Œ·Ì «·–ﬂÌ.")
+            logger.warning("[GEMINI] GEMINI_API_KEY √õ√≠√ë √£√¶√å√¶√è √à√£√ä√õ√≠√ë√á√ä √á√°√à√≠√Ü√â. √á√ì√ä√é√è√á√£ √á√°√ë√è √á√°√è√á√é√°√≠ √á√°√ê√ü√≠.")
             return cls._fallback_local_narrative(user_query, company, mariam_profile)
 
         try:
@@ -376,7 +376,7 @@ class GeminiTourismAI:
                 "contents": [
                     {
                         "role": "user",
-                        "parts": [{"text": user_query or "ÕœÀÌ‰Ì ⁄‰ Â–« «·„ﬂ«‰ Ê√»—“ „« Ì„ﬂ‰‰Ì —ƒÌ Â Â‰«!"}]
+                        "parts": [{"text": user_query or "√ç√è√ã√≠√§√≠ √ö√§ √•√ê√á √á√°√£√ü√á√§ √¶√É√à√ë√í √£√á √≠√£√ü√§√§√≠ √ë√Ñ√≠√ä√• √•√§√á!"}]
                     }
                 ],
                 "generationConfig": {
@@ -406,26 +406,26 @@ class GeminiTourismAI:
             return cls._fallback_local_narrative(user_query, company, mariam_profile)
 
         except Exception as e:
-            logger.error(f"[GEMINI ERROR] ›‘· «” œ⁄«¡ Gemini API: {str(e)}")
+            logger.error(f"[GEMINI ERROR] √ù√î√° √á√ì√ä√è√ö√á√Å Gemini API: {str(e)}")
             return cls._fallback_local_narrative(user_query, company, mariam_profile)
 
     @classmethod
     def _fallback_local_narrative(cls, query: str, company: TourismCompany, profile: MariamAssistantProfile) -> str:
         q = query.lower() if query else ""
-        if any(w in q for w in ["„‰ »—„Ãﬂ", "„‰ ÿÊ—ﬂ", "„Ì‰ ⁄„·ﬂ", "«·„ÿÊ—", "«·„»—„Ã…", "„Ì‰ »—„Ã"]):
+        if any(w in q for w in ["√£√§ √à√ë√£√å√ü", "√£√§ √ò√¶√ë√ü", "√£√≠√§ √ö√£√°√ü", "√á√°√£√ò√¶√ë", "√á√°√£√à√ë√£√å√â", "√£√≠√§ √à√ë√£√å"]):
             return profile.developer_credit
 
         if not query.strip():
-            return f"{profile.custom_greeting} Ì”⁄œ‰Ì „—«›ﬁ ﬂ Â‰« ›Ì {company.name_ar}. «”√·‰Ì ⁄‰  «—ÌŒ «·„ﬂ«‰° √”—«—Â «·„⁄„«—Ì…° √Ê „«  Êœ «” ﬂ‘«›Â «·¬‰!"
+            return f"{profile.custom_greeting} √≠√ì√ö√è√§√≠ √£√ë√á√ù√û√ä√ü √•√§√á √ù√≠ {company.name_ar}. √á√ì√É√°√§√≠ √ö√§ √ä√á√ë√≠√é √á√°√£√ü√á√§¬° √É√ì√ë√á√ë√• √á√°√£√ö√£√á√ë√≠√â¬° √É√¶ √£√á √ä√¶√è √á√ì√ä√ü√î√á√ù√• √á√°√Ç√§!"
 
         return (
-            f"√Â·« »ﬂ Ì« ÷Ì›‰« ›Ì {company.name_ar}! ”ƒ«·ﬂ ⁄‰ '{query.strip()}' —«∆⁄ Ãœ«. "
-            f"Â–« «·„⁄·„ Ì⁄ »— „‰ œ—— «· —«À «·”Ì«ÕÌ° Ê‰Õ‰ œ«Œ· «·‰ÿ«ﬁ «·Ã€—«›Ì «·„Œ’’ ·Œœ„ ﬂ Ê ÊÃÌÂﬂ ŒÿÊ… »ŒÿÊ…."
+            f"√É√•√°√á√∞ √à√ü √≠√á √ñ√≠√ù√§√á √ù√≠ {company.name_ar}! √ì√Ñ√á√°√ü √ö√§ '{query.strip()}' √ë√á√Ü√ö √å√è√á√∞. "
+            f"√•√ê√á √á√°√£√ö√°√£ √≠√ö√ä√à√ë √£√§ √è√ë√ë √á√°√ä√ë√á√ã √á√°√ì√≠√á√ç√≠¬° √¶√§√ç√§ √è√á√é√° √á√°√§√ò√á√û √á√°√å√õ√ë√á√ù√≠ √á√°√£√é√ï√ï √°√é√è√£√ä√ü √¶√ä√¶√å√≠√•√ü √é√ò√¶√â √à√é√ò√¶√â."
         )
 
 
 # =============================================================================================
-# 6. „œÌ— «·„‰ŸÊ„… Êﬁ«⁄œ… «·»Ì«‰«  ›Ì «·–«ﬂ—… (Tourism Repository)
+# 6. √£√è√≠√ë √á√°√£√§√ô√¶√£√â √¶√û√á√ö√è√â √á√°√à√≠√á√§√á√ä √ù√≠ √á√°√ê√á√ü√ë√â (Tourism Repository)
 # =============================================================================================
 
 class TourismDataManager:
@@ -439,7 +439,7 @@ class TourismDataManager:
         now = datetime.now(timezone.utc)
         mena_house = TourismCompany(
             company_id="comp_mena_house_01",
-            name_ar="›‰œﬁ „«—ÌÊ  „Ì‰« Â«Ê” «·ÃÌ“…",
+            name_ar="√ù√§√è√û √£√á√ë√≠√¶√ä √£√≠√§√á √•√á√¶√ì √á√°√å√≠√í√â",
             name_en="Marriott Mena House Cairo",
             slug="mena-house-pyramids",
             coordinates=GeofenceCoordinates(latitude=29.9856, longitude=31.1328),
@@ -451,14 +451,14 @@ class TourismDataManager:
             total_balance_paid_egp=8000.0,
             etisalat_cash_wallet="01150000001",
             contact_phone="+201001234567",
-            custom_welcome_message="„—Õ»« »ﬂ„ ›Ì √Õ÷«‰  «—ÌŒ «·√Â—«„«  «·Œ«·œ ›Ì „Ì‰« Â«Ê”!"
+            custom_welcome_message="√£√ë√ç√à√á√∞ √à√ü√£ √ù√≠ √É√ç√ñ√á√§ √ä√á√ë√≠√é √á√°√É√•√ë√á√£√á√ä √á√°√é√á√°√è √ù√≠ √£√≠√§√á √•√á√¶√ì!"
         )
         mena_house.qr_token = CryptographicService.generate_signed_qr_payload(mena_house)
         self.companies[mena_house.company_id] = mena_house
 
         abdeen = TourismCompany(
             company_id="comp_abdeen_02",
-            name_ar="„ Õ› ﬁ’— ⁄«»œÌ‰ «· «—ÌŒÌ",
+            name_ar="√£√ä√ç√ù √û√ï√ë √ö√á√à√è√≠√§ √á√°√ä√á√ë√≠√é√≠",
             name_en="Abdeen Palace Heritage Museum",
             slug="abdeen-palace",
             coordinates=GeofenceCoordinates(latitude=30.0433, longitude=31.2472),
@@ -470,7 +470,7 @@ class TourismDataManager:
             total_balance_paid_egp=5000.0,
             etisalat_cash_wallet="01150000002",
             contact_phone="+201007654321",
-            custom_welcome_message="√Â·« »ﬂ„ ›Ì ﬁ’— ⁄«»œÌ‰°  Õ›… «·⁄„«—… «· «—ÌŒÌ… »«·ﬁ«Â—… «·ŒœÌÊÌ…."
+            custom_welcome_message="√É√•√°√á√∞ √à√ü√£ √ù√≠ √û√ï√ë √ö√á√à√è√≠√§¬° √ä√ç√ù√â √á√°√ö√£√á√ë√â √á√°√ä√á√ë√≠√é√≠√â √à√á√°√û√á√•√ë√â √á√°√é√è√≠√¶√≠√â."
         )
         abdeen.qr_token = CryptographicService.generate_signed_qr_payload(abdeen)
         self.companies[abdeen.company_id] = abdeen
@@ -495,22 +495,22 @@ class TourismDataManager:
         })
 
 
-# ≈‰‘«¡ «·‰”Œ… «·„‘ —ﬂ… „‰ „œÌ— «·»Ì«‰« 
+# √Ö√§√î√á√Å √á√°√§√ì√é√â √á√°√£√î√ä√ë√ü√â √£√§ √£√è√≠√ë √á√°√à√≠√á√§√á√ä
 repo = TourismDataManager()
 
 
 # =============================================================================================
-# 7. »‰«¡  ÿ»Ìﬁ Flask Ê≈‰‘«¡ «·„”«—«  «·»—„ÃÌ… (Flask Web API Implementation)
+# 7. √à√§√á√Å √ä√ò√à√≠√û Flask √¶√Ö√§√î√á√Å √á√°√£√ì√á√ë√á√ä √á√°√à√ë√£√å√≠√â (Flask Web API Implementation)
 # =============================================================================================
 
 def create_flask_app() -> Any:
-    """„’‰⁄  ÿ»Ìﬁ Flask «·„“Êœ »‰Ÿ«„ CORS Ê«·√„«‰ «· «„"""
+    """√£√ï√§√ö √ä√ò√à√≠√û Flask √á√°√£√í√¶√è √à√§√ô√á√£ CORS √¶√á√°√É√£√á√§ √á√°√ä√á√£"""
     if Flask is None:
-        raise RuntimeError("„ﬂ »… Flask €Ì— „À» …. Ì—ÃÏ  À»Ì Â« ⁄»— 'pip install flask'")
+        raise RuntimeError("√£√ü√ä√à√â Flask √õ√≠√ë √£√ã√à√ä√â. √≠√ë√å√¨ √ä√ã√à√≠√ä√•√á √ö√à√ë 'pip install flask'")
 
     app = Flask(__name__)
 
-    # ≈⁄œ«œ  —ÊÌ”«  CORS ··”„«Õ »«·—»ÿ „⁄ Ê«ÃÂ«  React Ê Flutter Ê ÿ»Ìﬁ«  «·Â« ›
+    # √Ö√ö√è√á√è √ä√ë√¶√≠√ì√á√ä CORS √°√°√ì√£√á√ç √à√á√°√ë√à√ò √£√ö √¶√á√å√•√á√ä React √¶ Flutter √¶√ä√ò√à√≠√û√á√ä √á√°√•√á√ä√ù
     @app.after_request
     def apply_cors_headers(response):
         response.headers["Access-Control-Allow-Origin"] = "*"
@@ -539,11 +539,11 @@ def create_flask_app() -> Any:
         })
 
     # -----------------------------------------------------------------------------------------
-    # „”«—«  «·„‘—›… (Super Admin Routes)
+    # √£√ì√á√ë√á√ä √á√°√£√î√ë√ù√â (Super Admin Routes)
     # -----------------------------------------------------------------------------------------
 
     def check_admin_authorization() -> bool:
-        """›Õ’ «· —ÊÌ”«  Ê«· √ﬂœ „‰ ÂÊÌ… «·„‘—›… «·„Â‰œ”… —ﬁÌ…"""
+        """√ù√ç√ï √á√°√ä√ë√¶√≠√ì√á√ä √¶√á√°√ä√É√ü√è √£√§ √•√¶√≠√â √á√°√£√î√ë√ù√â √á√°√£√•√§√è√ì√â √ë√û√≠√â"""
         key = request.headers.get("x-admin-key") or request.args.get("admin_key")
         auth_header = request.headers.get("Authorization", "")
         if auth_header.startswith("Bearer "):
@@ -562,17 +562,17 @@ def create_flask_app() -> Any:
         secret_code = body.get("secretKey") or body.get("password") or ""
 
         if not CryptographicService.verify_super_admin_secret(secret_code):
-            logger.warning(f"[SECURITY ALERT] „Õ«Ê·… œŒÊ· ›«‘·… ··ÊÕ… «·„‘—›…: {secret_code[:3]}***")
+            logger.warning(f"[SECURITY ALERT] √£√ç√á√¶√°√â √è√é√¶√° √ù√á√î√°√â √°√°√¶√ç√â √á√°√£√î√ë√ù√â: {secret_code[:3]}***")
             return jsonify({
                 "success": False,
-                "error": "€Ì— „’—Õ: ﬂÊœ «·œŒÊ· «·Œ«’ »«·„‘—›… €Ì— ’ÕÌÕ!"
+                "error": "√õ√≠√ë √£√ï√ë√ç: √ü√¶√è √á√°√è√é√¶√° √á√°√é√á√ï √à√á√°√£√î√ë√ù√â √õ√≠√ë √ï√ç√≠√ç!"
             }), 401
 
         session_token = CryptographicService.issue_super_admin_session_token(secret_code)
-        logger.info("[SECURITY AUDIT] œŒÊ· ‰«ÃÕ ··„‘—›… «·„Â‰œ”… —ﬁÌ….")
+        logger.info("[SECURITY AUDIT] √è√é√¶√° √§√á√å√ç √°√°√£√î√ë√ù√â √á√°√£√•√§√è√ì√â √ë√û√≠√â.")
         return jsonify({
             "success": True,
-            "message": "√Â·« »ﬂˆ Ì« „Â‰œ”… —ﬁÌ… ›Ì ‰Ÿ«„ﬂˆ «·Œ«’",
+            "message": "√É√•√°√á√∞ √à√ü√∂ √≠√á √£√•√§√è√ì√â √ë√û√≠√â √ù√≠ √§√ô√á√£√ü√∂ √á√°√é√á√ï",
             "sessionToken": session_token,
             "role": "SUPER_ADMIN"
         })
@@ -592,9 +592,9 @@ def create_flask_app() -> Any:
                 "companies": [c.to_dict() for c in repo.companies.values()]
             })
 
-        # ≈÷«›… ‘—ﬂ… ÃœÌœ…
+        # √Ö√ñ√á√ù√â √î√ë√ü√â √å√è√≠√è√â
         body = request.get_json(silent=True) or {}
-        name_ar = body.get("nameAr", "‘—ﬂ… ”Ì«ÕÌ… ÃœÌœ…")
+        name_ar = body.get("nameAr", "√î√ë√ü√â √ì√≠√á√ç√≠√â √å√è√≠√è√â")
         name_en = body.get("name", "New Tourism Company")
         slug = body.get("slug") or f"company-{int(time.time())}"
         coords_raw = body.get("coordinates") or {}
@@ -621,14 +621,14 @@ def create_flask_app() -> Any:
             total_balance_paid_egp=fee,
             etisalat_cash_wallet=body.get("etisalatCashWallet", "01150000000"),
             contact_phone=body.get("contactPhone", ""),
-            custom_welcome_message=body.get("customWelcomeMessage", f"„—Õ»« »ﬂ„ ›Ì {name_ar}")
+            custom_welcome_message=body.get("customWelcomeMessage", f"√£√ë√ç√à√á√∞ √à√ü√£ √ù√≠ {name_ar}")
         )
         new_company.qr_token = CryptographicService.generate_signed_qr_payload(new_company)
         repo.companies[cid] = new_company
 
         return jsonify({
             "success": True,
-            "message": f" „  ”ÃÌ· „‰‘√… '{name_ar}' »‰Ã«Õ",
+            "message": f"√ä√£ √ä√ì√å√≠√° √£√§√î√É√â '{name_ar}' √à√§√å√á√ç",
             "company": new_company.to_dict()
         }), 201
 
@@ -657,7 +657,7 @@ def create_flask_app() -> Any:
 
         return jsonify({
             "success": True,
-            "message": f" „  ÃœÌœ «‘ —«ﬂ '{company.name_ar}' »‰Ã«Õ",
+            "message": f"√ä√£ √ä√å√è√≠√è √á√î√ä√ë√á√ü '{company.name_ar}' √à√§√å√á√ç",
             "newExpiry": company.subscription_expiry.isoformat(),
             "company": company.to_dict()
         })
@@ -683,7 +683,7 @@ def create_flask_app() -> Any:
         })
 
     # -----------------------------------------------------------------------------------------
-    # „”«—«  ≈œ«—… ÂÊÌ… Ê’Ê—… „—Ì„ (Mariam Profile & Direct Avatar Upload)
+    # √£√ì√á√ë√á√ä √Ö√è√á√ë√â √•√¶√≠√â √¶√ï√¶√ë√â √£√ë√≠√£ (Mariam Profile & Direct Avatar Upload)
     # -----------------------------------------------------------------------------------------
 
     @app.route("/api/admin/mariam/profile", methods=["GET", "POST", "OPTIONS"])
@@ -716,13 +716,13 @@ def create_flask_app() -> Any:
 
         return jsonify({
             "success": True,
-            "message": " „  ÕœÌÀ ÂÊÌ… „—Ì„ »‰Ã«Õ",
+            "message": "√ä√£ √ä√ç√è√≠√ã √•√¶√≠√â √£√ë√≠√£ √à√§√å√á√ç",
             "profile": repo.mariam_profile.to_dict()
         })
 
     @app.route("/api/admin/mariam/upload-avatar", methods=["POST", "OPTIONS"])
     def mariam_upload_avatar():
-        """—›⁄ ’Ê—… „—Ì„ „»«‘—… „‰ √·»Ê„ ﬂ«„Ì—« «·Â« › «·„Õ„Ê· » ‰”Ìﬁ Base64"""
+        """√ë√ù√ö √ï√¶√ë√â √£√ë√≠√£ √£√à√á√î√ë√â √£√§ √É√°√à√¶√£ √ü√á√£√≠√ë√á √á√°√•√á√ä√ù √á√°√£√ç√£√¶√° √à√ä√§√ì√≠√û Base64"""
         if request.method == "OPTIONS":
             return jsonify({"ok": True})
         if not check_admin_authorization():
@@ -733,17 +733,17 @@ def create_flask_app() -> Any:
         filename = body.get("filename", "phone_camera_image.jpg")
 
         if not img_payload or not (img_payload.startswith("data:image/") or img_payload.startswith("http")):
-            return jsonify({"success": False, "error": "„·› «·’Ê—… €Ì— ’«·Õ"}), 400
+            return jsonify({"success": False, "error": "√£√°√ù √á√°√ï√¶√ë√â √õ√≠√ë √ï√á√°√ç"}), 400
 
         repo.mariam_profile.avatar_url_or_base64 = img_payload
         repo.mariam_profile.is_uploaded_from_device = True
         repo.mariam_profile.source_filename = filename
         repo.mariam_profile.last_updated_at = datetime.now(timezone.utc)
 
-        logger.info(f"[AVATAR UPLOAD] ﬁ«„  «·„‘—›… »—›⁄ ’Ê—… ÃœÌœ… ·„—Ì„ ({filename})")
+        logger.info(f"[AVATAR UPLOAD] √û√á√£√ä √á√°√£√î√ë√ù√â √à√ë√ù√ö √ï√¶√ë√â √å√è√≠√è√â √°√£√ë√≠√£ ({filename})")
         return jsonify({
             "success": True,
-            "message": " „ —›⁄ ’Ê—… „—Ì„ „‰ Â« ›ﬂˆ »‰Ã«Õ Ê ÿ»ÌﬁÂ« ⁄·Ï ﬂ«„· «·‰Ÿ«„",
+            "message": "√ä√£ √ë√ù√ö √ï√¶√ë√â √£√ë√≠√£ √£√§ √•√á√ä√ù√ü√∂ √à√§√å√á√ç √¶√ä√ò√à√≠√û√•√á √ö√°√¨ √ü√á√£√° √á√°√§√ô√á√£",
             "profile": repo.mariam_profile.to_dict()
         })
 
@@ -767,7 +767,7 @@ def create_flask_app() -> Any:
         })
 
     # -----------------------------------------------------------------------------------------
-    # „”«—«  «·”Ì«Õ Ê«· Õﬁﬁ «·Ã€—«›Ì «·’«—„ (Tourist & Geofencing Gateway)
+    # √£√ì√á√ë√á√ä √á√°√ì√≠√á√ç √¶√á√°√ä√ç√û√û √á√°√å√õ√ë√á√ù√≠ √á√°√ï√á√ë√£ (Tourist & Geofencing Gateway)
     # -----------------------------------------------------------------------------------------
 
     @app.route("/api/tourist/chat", methods=["POST", "OPTIONS"])
@@ -783,7 +783,7 @@ def create_flask_app() -> Any:
         user_query = body.get("message") or body.get("query") or ""
         bypass_admin = body.get("adminBypassKey") or request.headers.get("x-admin-key")
 
-        # 1. ›Õ’ Ê ÕœÌœ «·„‰‘√… ≈„« ⁄»— «·‹ QR «·„Êﬁ¯⁄ √Ê «·‹ venueId
+        # 1. √ù√ç√ï √¶√ä√ç√è√≠√è √á√°√£√§√î√É√â √Ö√£√á √ö√à√ë √á√°√ú QR √á√°√£√¶√û√∏√ö √É√¶ √á√°√ú venueId
         venue_id = body.get("venueId")
         company = None
         if qr_token:
@@ -792,7 +792,7 @@ def create_flask_app() -> Any:
                 return jsonify({
                     "success": False,
                     "error": "INVALID_QR",
-                    "messageAr": f"—„“ «·«” Ã«»… «·”—Ì⁄… (QR) €Ì— ’«·Õ √Ê „‰ ÂÌ «·’·«ÕÌ…: {err}"
+                    "messageAr": f"√ë√£√í √á√°√á√ì√ä√å√á√à√â √á√°√ì√ë√≠√ö√â (QR) √õ√≠√ë √ï√á√°√ç √É√¶ √£√§√ä√•√≠ √á√°√ï√°√á√ç√≠√â: {err}"
                 }), 403
             company = repo.get_company(payload.get("cid", ""))
         elif venue_id:
@@ -804,26 +804,26 @@ def create_flask_app() -> Any:
         if not company:
             return jsonify({"error": "No venue found"}), 404
 
-        # 2. ›Õ’ Õ«·… «·«‘ —«ﬂ Ê«·ﬁ›·
+        # 2. √ù√ç√ï √ç√á√°√â √á√°√á√î√ä√ë√á√ü √¶√á√°√û√ù√°
         is_super_admin = CryptographicService.verify_super_admin_secret(bypass_admin or "")
         if not is_super_admin and not company.is_subscription_valid:
             return jsonify({
                 "success": False,
                 "error": "SUBSCRIPTION_INACTIVE",
-                "messageAr": "⁄–—«° «·Œœ„… „ Êﬁ›… Õ«·Ì« ·Â–Â «·„‰‘√… ·«‰ Â«¡ › —… «·«‘ —«ﬂ «·‘Â—Ì."
+                "messageAr": "√ö√ê√ë√á√∞¬° √á√°√é√è√£√â √£√ä√¶√û√ù√â √ç√á√°√≠√á√∞ √°√•√ê√• √á√°√£√§√î√É√â √°√á√§√ä√•√á√Å √ù√ä√ë√â √á√°√á√î√ä√ë√á√ü √á√°√î√•√ë√≠."
             }), 403
 
-        # 3. «·›Õ’ «·Ã€—«›Ì «·’«—„ (GPS Geofencing)
+        # 3. √á√°√ù√ç√ï √á√°√å√õ√ë√á√ù√≠ √á√°√ï√á√ë√£ (GPS Geofencing)
         tourist_coords = GeofenceCoordinates(latitude=lat, longitude=lng)
         is_inside, distance = GeofenceValidator.evaluate(tourist_coords, company)
 
         if not is_inside and not is_super_admin:
             denial_msg = (
-                f" ‰»ÌÂ √„‰Ì: √‰  Õ«·Ì« Œ«—Ã «·‰ÿ«ﬁ «·Ã€—«›Ì ·„‰‘√… '{company.name_ar}'. "
-                f"«·„”«›… «·Õ«·Ì… {distance:.1f} „ —«° »Ì‰„« «·‰ÿ«ﬁ «·„’—Õ »Â ÂÊ {company.geofence_radius_meters} „ —« ›ﬁÿ. "
-                "«·Œœ„«  «·’Ê Ì…  ⁄„· Õ’—Ì« ··“Ê«— «·„ Ê«ÃœÌ‰ œ«Œ· «·„Êﬁ⁄."
+                f"√ä√§√à√≠√• √É√£√§√≠: √É√§√ä √ç√á√°√≠√á√∞ √é√á√ë√å √á√°√§√ò√á√û √á√°√å√õ√ë√á√ù√≠ √°√£√§√î√É√â '{company.name_ar}'. "
+                f"√á√°√£√ì√á√ù√â √á√°√ç√á√°√≠√â {distance:.1f} √£√ä√ë√á√∞¬° √à√≠√§√£√á √á√°√§√ò√á√û √á√°√£√ï√ë√ç √à√• √•√¶ {company.geofence_radius_meters} √£√ä√ë√á√∞ √ù√û√ò. "
+                "√á√°√é√è√£√á√ä √á√°√ï√¶√ä√≠√â √ä√ö√£√° √ç√ï√ë√≠√á√∞ √°√°√í√¶√á√ë √á√°√£√ä√¶√á√å√è√≠√§ √è√á√é√° √á√°√£√¶√û√ö."
             )
-            repo.log_event(company.company_id, False, distance, False, "Œ«—Ã «·‰ÿ«ﬁ «·Ã€—«›Ì")
+            repo.log_event(company.company_id, False, distance, False, "√é√á√ë√å √á√°√§√ò√á√û √á√°√å√õ√ë√á√ù√≠")
             return jsonify({
                 "success": False,
                 "error": "OUT_OF_GEOFENCE",
@@ -832,7 +832,7 @@ def create_flask_app() -> Any:
                 "allowedRadiusMeters": company.geofence_radius_meters
             }), 403
 
-        # 4.  Ê·Ìœ «·—œ «·–ﬂÌ ⁄»— Gemini API »„› «Õ «·»Ì∆… os.environ.get('GEMINI_API_KEY')
+        # 4. √ä√¶√°√≠√è √á√°√ë√è √á√°√ê√ü√≠ √ö√à√ë Gemini API √à√£√ù√ä√á√ç √á√°√à√≠√Ü√â os.environ.get('GEMINI_API_KEY')
         ai_reply = GeminiTourismAI.generate_tour_reply(
             user_query=user_query,
             company=company,
@@ -854,7 +854,7 @@ def create_flask_app() -> Any:
 
 
 # =============================================================================================
-# 8. ‰ﬁÿ… «·»œ«Ì… · ‘€Ì· «·Œ«œ„ (Server Runner)
+# 8. √§√û√ò√â √á√°√à√è√á√≠√â √°√ä√î√õ√≠√° √á√°√é√á√è√£ (Server Runner)
 # =============================================================================================
 
 app = None
@@ -864,15 +864,15 @@ if Flask is not None:
 if __name__ == "__main__":
     port = int(os.environ.get("FLASK_PORT", 5000))
     print("\n" + "="*80)
-    print("?? »œ¡  ‘€Ì· Œ«œ„ Flask ·≈œ«—… «·”Ì«Õ… «·–ﬂÌ… (Smart Tourism Flask App)")
-    print(f"?? ›Õ’ „› «Õ Gemini API „‰ „ €Ì—«  «·»Ì∆…: {'„›⁄· Ê„ «Õ »‰Ã«Õ ?' if os.environ.get('GEMINI_API_KEY') else '€Ì— „Õœœ (”Ì „ «” Œœ«„ «·„Õ—ﬂ «·«Õ Ì«ÿÌ «·–ﬂÌ)'}")
-    print(f"?? Õ„«Ì… «·„‘—›… («·„Â‰œ”… —ﬁÌ…): „›⁄·… »ﬂÊœ {SUPER_ADMIN_SECRET_KEY[:4]}***")
-    print(f"?? «·«” „«⁄ ⁄·Ï «·„‰›–: http://0.0.0.0:{port}")
+    print("?? √à√è√Å √ä√î√õ√≠√° √é√á√è√£ Flask √°√Ö√è√á√ë√â √á√°√ì√≠√á√ç√â √á√°√ê√ü√≠√â (Smart Tourism Flask App)")
+    print(f"?? √ù√ç√ï √£√ù√ä√á√ç Gemini API √£√§ √£√ä√õ√≠√ë√á√ä √á√°√à√≠√Ü√â: {'√£√ù√ö√° √¶√£√ä√á√ç √à√§√å√á√ç ?' if os.environ.get('GEMINI_API_KEY') else '√õ√≠√ë √£√ç√è√è (√ì√≠√ä√£ √á√ì√ä√é√è√á√£ √á√°√£√ç√ë√ü √á√°√á√ç√ä√≠√á√ò√≠ √á√°√ê√ü√≠)'}")
+    print(f"?? √ç√£√á√≠√â √á√°√£√î√ë√ù√â (√á√°√£√•√§√è√ì√â √ë√û√≠√â): √£√ù√ö√°√â √à√ü√¶√è {SUPER_ADMIN_SECRET_KEY[:4]}***")
+    print(f"?? √á√°√á√ì√ä√£√á√ö √ö√°√¨ √á√°√£√§√ù√ê: http://0.0.0.0:{port}")
     print("="*80 + "\n")
     if app:
         app.run(host="0.0.0.0", port=port, debug=True)
     else:
-        print("Œÿ√: Ì—ÃÏ  À»Ì  Õ“„… Flask ⁄»—: pip install flask")
+        print("√é√ò√É: √≠√ë√å√¨ √ä√ã√à√≠√ä √ç√í√£√â Flask √ö√à√ë: pip install flask")
 from flask import Flask, render_template
 
 app = Flask(__name__)
